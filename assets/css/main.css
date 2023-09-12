@@ -287,7 +287,6 @@ body {
     font-size: var(--fs-biggest);
     margin-bottom: 5rem;
     position: relative;
-    width: 130%;
     padding-bottom: 2rem;
 }
 
@@ -324,7 +323,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 5rem;
-    width: 50rem;
 }
 
 .hero__info-number {
@@ -376,9 +374,17 @@ body {
 }
 
 .skills__wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.skills__card {
+    background-color: var(--color-bg-secondary);
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    max-width: 30rem;
+    justify-self: center;
+    transition: var(--transition);
 }
 
 .skills__content {
@@ -660,6 +666,7 @@ body {
 
     .hero__img {
         justify-self: flex-end;
+        height: 450px;
     }
 }
 
@@ -668,8 +675,6 @@ body {
 @media screen and (min-width: 968px) {
     .about__wrapper {
         grid-template-columns: repeat(2, 1fr);
-        margin: 0px -85px;
-        gap: 0;
     }
 
     .about__content {
@@ -688,6 +693,7 @@ body {
 
     .project__wrapper {
         grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 
     .contact__wrapper {

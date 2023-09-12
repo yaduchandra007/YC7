@@ -1,3 +1,7 @@
+window.onload = function () {
+  window.location.hash = "#home";
+};
+
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
   navItem = document.querySelectorAll(".nav__item"),
